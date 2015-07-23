@@ -1,14 +1,14 @@
-# Blocks vs. Procs vs. Lambdas, aka Closures in Ruby
+# Bonus: Blocks vs. Procs vs. Lambdas, a.k.a. "Closures" in Ruby
 
 ## What is a Closure?
 
-A closure is a block of functional code with variables that are bound to the environment the closure is called in.
+A closure is a block of functional code with variables that are bound to the environment that the closure is called in.
 
 A closure has a few important properties:
-* it can be passed around like an object (but that does not necessarily mean it is an object, as we'll discuss below)
-* a closure can be defined in one scope and be called in a completely different scope
-* it remembers the variables within its scope at the time of creation; when it's called, it can access those variables even if they might not be in that current scope
-  * a closure retains knowledge of its lexical environment at the time it was defined
+
+  * it can be passed around like an object (but that does not necessarily mean it is an object, as we'll discuss below),
+  * a closure can be defined in one scope and be called in a completely different scope,
+  * it remembers the variables within its scope at the time of creation; when it's called, it can access those variables even if they might not be in that current scope—meaning that a closure retains knowledge of its lexical environment at the time that it was defined.
 
 ## Blocks
 
@@ -32,7 +32,7 @@ end
 array.each { |x| puts x } 
 ```
 
-You might have seen this within an rspec test; the `before(:each)` method is given a block which it yields to for each of the tests within the same context.
+You might have seen this within an RSpec test; the `before(:each)` method is given a block to which it yields for each of the tests within the same context.
 
 ```ruby
 before(:each) do 
@@ -42,10 +42,11 @@ end
 
 ## Procs
 
-Procs are a type of closure in Ruby that behave very similarly to blocks with a few key differences:
-* a proc can be assigned to a local variable
-* a proc instance is executed by calling the `call` method on it
-* more than one proc can be passed to a method
+Procs are a type of closure in Ruby that behave very similarly to blocks but with a few key differences:
+
+  * a proc can be assigned to a local variable,
+  * a proc instance is executed by calling the `call` method on it, and
+  * more than one proc can be passed to a method.
 
 But essentially, **a proc is a block turned into an object by being assigned to an instance of the Proc class.**
 
@@ -93,13 +94,13 @@ plus_one = -> { |n| puts n + 1 }
 ```
 
 Lambdas and procs are used almost interchangeably, but there are a few differences between the two: 
-* lambdas expect a certain amount of arguments and check for them; procs just returns nil for the missing argument, but does not throw an error
-* they return differently: lambdas return to the calling method and procs return immediately without going back to the caller
-  * essentially lambdas behave more like method calls; you can think of them as anonymous functions
+
+* lambdas expect a certain amount of arguments and check for them; procs just returns `nil` for the missing argument, but does not throw an error
+* they return differently: lambdas return to the calling method and procs return immediately without going back to the caller—essentially, lambdas behave more like method calls: you can think of them as anonymous functions
 
 ## Closing Thoughts
 
-If this is confusing to you, particularly the procs and lambdas, don't worry! Procs and lambdas are awesome and enable you to write interesting, powerful code. However, day to day you won't be working with them a whole lot.Blocks, however, you interact with everyday. Focus on getting to know them the best.
+If this is confusing to you, particularly the procs and lambdas, don't worry! Procs and lambdas are awesome and enable you to write interesting, powerful code. However, day to day you won't be working with them a whole lot. Blocks, however, you will interact with every day. Focus on getting to know them the best.
 
 ## Resources
 
