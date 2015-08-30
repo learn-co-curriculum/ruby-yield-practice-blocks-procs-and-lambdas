@@ -90,7 +90,7 @@ array.each(&plus_one)
 A lambda can also be declared in this funny way:
 
 ```ruby
-plus_one = -> { |n| puts n + 1 }
+plus_one = ->(n) { puts n + 1 }
 ```
 
 Lambdas and procs are used almost interchangeably, but there are a few differences between the two: 
