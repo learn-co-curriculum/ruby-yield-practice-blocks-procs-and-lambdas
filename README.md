@@ -74,7 +74,7 @@ greeting.call("Amanda")
 
 A lambda isn't that much different than a proc in functionality.
 
-Here's a lambda being passed to the enumerator each. the `&` before it turns it into a block, which each expects as an argument.
+Here's a lambda being passed to the enumerator each. The `&` before it turns it into a block, which each expects as an argument.
 
 ```ruby
 plus_one = lambda { |n| puts n + 1 }
@@ -95,7 +95,7 @@ plus_one = ->(n) { puts n + 1 }
 
 Lambdas and procs are used almost interchangeably, but there are a few differences between the two: 
 
-* lambdas expect a certain amount of arguments and check for them; procs just returns `nil` for the missing argument, but does not throw an error
+* lambdas expect a certain amount of arguments and check for them; procs just returns `nil` for the missing argument, but do not throw an error
 * they return differently: lambdas return to the calling method and procs return immediately without going back to the caller—essentially, lambdas behave more like method calls: you can think of them as anonymous functions
 
 ## Closing Thoughts
