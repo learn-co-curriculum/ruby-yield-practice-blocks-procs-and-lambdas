@@ -106,3 +106,5 @@ If this is confusing to you, particularly the procs and lambdas, don't worry! Pr
 
 * [The Difference between Procs and Lambdas](http://www.skorks.com/2010/05/ruby-procs-and-lambdas-and-the-difference-between-them/)
 * [Jim Weirich on Procs and Lambdas](https://gist.github.com/mislav/4508988)
+
+<a href='https://learn.co/lessons/ruby-closures-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
